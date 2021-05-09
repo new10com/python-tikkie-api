@@ -1,0 +1,17 @@
+default_language_version:
+  python: python3.8
+
+repos:
+  - repo: https://github.com/ambv/black
+    rev: 20.8b1
+    hooks:
+    - id: black
+      entry: env LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 black  # Workaround for SourceTree not setting environment variables
+  - repo: https://github.com/pycqa/isort
+    rev: 5.5.2
+    hooks:
+    - id: isort
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.8.4
+    hooks:
+    - id: flake8
